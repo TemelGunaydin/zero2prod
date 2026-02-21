@@ -1,0 +1,10 @@
+[package]
+name = "zero2prod"
+version = "0.1.0"
+edition = "2024"
+
+# On MacOS, `brew install llvm` and follow steps in `brew info llvm`
+[target.aarch64-apple-darwin]
+rustflags = ["-C", "link-arg=-fuse-ld=/opt/homebrew/opt/llvm/bin/ld64.lld"]
+
+[dependencies]
